@@ -47,6 +47,9 @@ function createVue() {
     mounted: function (value) {
 
       breakpointController.addEventListener(BREAKPOINT_UPDATED, this.breakpointUpdated);
+      _.delay(() => {
+        breakpointController._updateBreakpoint();
+      }, 50);
 
       // Check if screen has touch events to enable or not hover state on buttons
       if (!this.hasTouch()) {

@@ -33,7 +33,7 @@ class BreakpointController extends EventDispatcher {
     _updateBreakpoint(){
         var breakpoint = this.getBreakpoint();
         if(this.prevBreakpoint !== breakpoint){
-            console.log('BreakpointController :: updateBreakpoint', breakpoint);
+            // console.log('BreakpointController :: updateBreakpoint', breakpoint);
             this.dispatchEvent(BREAKPOINT_UPDATED, breakpoint);
         }
     }

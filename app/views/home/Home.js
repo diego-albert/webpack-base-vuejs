@@ -2,7 +2,6 @@ import Vue from 'vue';
 import _ from 'lodash';
 import {TweenMax} from "gsap";
 
-
 export default Vue.extend({
     name: 'Home',
     data: function () {
@@ -11,6 +10,11 @@ export default Vue.extend({
             isTablet: false,
             isDesktop: false
         };
+    },
+    computed: {
+        count() {
+            return this.$store.state.breakpoints
+        }
     },
 
     created() {
@@ -24,6 +28,8 @@ export default Vue.extend({
     },
 
     methods: {
-
+        // count(val) {
+        //     console.log(val);
+        // }
     }
 });
