@@ -1,0 +1,8 @@
+<div class="app-container">
+    <menu-view ref="menu"></menu-view>
+    <div id="app">
+        <transition name="fade">
+            <router-view :key="$route.path"></router-view>
+        </transition>
+    </div>
+</div>

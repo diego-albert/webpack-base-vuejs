@@ -1,0 +1,7 @@
+.body-copy {
+	@extend %roboto_regular;
+	@include font-size(12px, 1.2em);
+	@include respond-to('desktop'){
+		@include font-size(18px, 1.4em);
+	}
+}
